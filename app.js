@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-contact = ["Bob", "John", "Ringo", "Paul", "George"];
+contacts = ["Bob", "John", "Ringo", "Paul", "George"];
 
 app.get("/", function(request, response){
 
@@ -10,12 +10,9 @@ app.get("/", function(request, response){
 });
 
 app.get("/contacts", function(request, response){
-    response.json(contact);
+    response.json(contacts);
 });
 
-app.post("/messages", function(request, response){
-    response.send("Messages");
-});
 
 
 

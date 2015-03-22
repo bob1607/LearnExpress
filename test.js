@@ -18,12 +18,20 @@ describe('Requests to the root path', function() {
             .expect('Content-Type', /html/, done);
     });
 
-    it('Returns an index file with Cities', function(done) {
+});
 
+describe('Requests to /contacts Path', function() {
+
+    it('Returns a 200 status code', function(done) {
         request(app)
-            .get('/')
-            .expect(/cities/i, done);
+            .get('/contacts')
+            .expect(200, done);
+    });
 
+    it('Returns a JSON format', function(done) {
+        request(app)
+            .get('/contacts')
+            .expect('Content-type', /json/, done);
     });
 
 });
