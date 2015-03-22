@@ -13,6 +13,9 @@ app.get("/contacts", function(request, response){
     response.json(contact);
 });
 
+app.post("/messages", function(request, response){
+    response.send("Messages");
+});
 
 
 
