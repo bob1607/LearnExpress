@@ -4,7 +4,7 @@
   "description": "App to learn the basics of Express",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha test.js",
+    "test": "mocha test.js",
     "start": "node bin/www"
   },
   "author": "Jérôme Mottet",

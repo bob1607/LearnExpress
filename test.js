@@ -1,13 +1,28 @@
 var request = require('supertest');
 var app = require('./app');
 
-describe("Request to Root Path", function(){
+describe('Requests to the root path', function() {
 
-    it("Returns a 200 status code", function(done){
+    it('Returns a 200 status code', function(done) {
 
         request(app)
-            .get("/")
+            .get('/')
             .expect(200, done);
+
+    });
+
+    it('Returns a HTML format', function(done) {
+
+        request(app)
+            .get('/')
+            .expect('Content-Type', /html/, done);
+    });
+
+    it('Returns an index file with Cities', function(done) {
+
+        request(app)
+            .get('/')
+            .expect(/cities/i, done);
 
     });
 
