@@ -1,0 +1,19 @@
+{
+  "name": "LearnExpress",
+  "version": "0.0.1",
+  "description": "App to learn the basics of Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha test.js",
+    "start": "node bin/www"
+  },
+  "author": "Jérôme Mottet",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "supertest": "^0.15.0"
+  }
+}
